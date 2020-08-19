@@ -3,7 +3,6 @@ body{font-family: sans-serif;
 
 }
 
-
 .progresso {margin-bottom: 100px auto;
 
 
@@ -11,7 +10,7 @@ body{font-family: sans-serif;
 
 
 .progresso img {width: 50px; 
-	            margin: 100px auto;
+	            margin: 30px auto;
 	            margin-bottom: 20px;
 
 
@@ -43,7 +42,7 @@ ul li .fas::after {content: '';
                    display: block;
                    position: absolute;
                    left: 0; 
-                   top: 190px; 
+                   top: 120px; 
                    z-index: -1;
 }      
 
@@ -74,6 +73,10 @@ ul li:nth-child(2) .fas::after {background: #1976d2;
 
 ul li:first-child .fas::after {width: 105px; 
 	                           left: 100px; 
+
+}
+
+ul li:last-child .fas::after {width: 105px; 
 
 }
 

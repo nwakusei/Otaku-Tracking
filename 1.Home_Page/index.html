@@ -34,8 +34,8 @@
       <!-- FONTS AWESOME ICONS --> 
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
       
-      <!-- FONTS MATERIALIZE -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- FONTS MATERIALIZE (ROBOTO) -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
       <!-- MATERIALIZE CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -56,7 +56,8 @@
               
               <!-- LOGO -->
               <a href="index.html" class="brand-logo"> <img src="img/otakutracking-logo.png" width="200px"> </a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
                 <li><a href="#!"> Para Você </a></li>
                 <li><a href="#!"> Para sua Empresa </a></li>
               </ul>
@@ -64,24 +65,29 @@
           </div>
         </div>
 
-      </nav><br><br>  
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="#!">Para Você</a></li>
+          <li><a href="#!">Para sua Empresa</a></li>
+        </ul>
+
+      </nav> <br><br>  
 
 
 
-      <!-- TÍTULO -->
+      <!-- LOGO & TÍTULO -->
       <div class="row">
 
         <div class="col s8 l10 offset-s2 offset-l1"> 
-
-          <!-- LOGO & TÍTULO -->
-          <div class="row blue darken-2 white-text z-depth-0" id="title">
+          
+          <!-- CONTEÚDO -->
+          <div class="row blue darken-2 white-text z-depth-1" id="logo-title">
 
             <div class="col s12">
               <br> <center> <img src="img/otakuyasan-logo.png" width="200px"> </center> <br>
             </div>
 
-            <div class="col s12 blue darken-1">
-              <center> <p> Pedido: 252 |  </p> </center>
+            <div class="col s12 blue darken-1" id="logo-title2">
+              <center> <p> Pedido: <i>252</i> &nbsp&nbsp|&nbsp&nbsp Última verificação: <i>19 de Agosto</i> </p> </center>
             </div>
 
           </div> 
@@ -90,15 +96,14 @@
       </div>
 
 
-      <!-- RASTREAMENTO -->
+      <!-- TRACKING -->
       <div class="row">
 
-        <div class="col s8 l10 offset-s2 offset-l1"> 
+        <div class="col s8 l10 offset-s2 offset-l1 white z-depth-1" id="tracking"> 
 
           <!-- CONTEÚDO -->
           <div class="row">
       
-            <!-- TRACKING -->
             <div class="progresso"> 
 
               <ul>
@@ -160,14 +165,7 @@
             </div>
           </div>
         </div>  
-      </div> <br><br><br><br><br><br>
-
-
-
-
-
-
-      
+      </div> <br><br><br><br><br><br>  
 
 
 
@@ -212,6 +210,12 @@
         $(document).ready(function(){
           $('.fixed-action-btn').floatingActionButton(); 
         }); 
+
+        /* NAVBAR MOBILE */ 
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+ 
         
       </script>
 
